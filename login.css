@@ -1,0 +1,21 @@
+html{
+	height:100%;
+}
+body{
+	background: url(https://source.unsplash.com/oKlzAqzWyrc);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+}
+.jumbotron{
+    background-color: rgba(0,0,0,.7);
+    min-width: 20%;
+    max-width: 35%;
+    position: relative;
+	left: 300px;
+}
+
+.jumbotron h4{
+	font-size: 2em;
+}
