@@ -6,3 +6,18 @@ body{
 	background-size: 103%;
 	background-position: 30% 25%;
 }
+
+textItem{
+    resize: horizontal;
+}
+
+.navbar-btn{
+    position:abslute;
+    bottom: 10px;
+}
+.button{
+    position: relative;
+}
+.col-md-12 col-md-offset-5{
+  display:flex;
+}
