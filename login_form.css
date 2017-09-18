@@ -39,6 +39,10 @@ section, footer{
 	display: block;
 }
 
+input::-webkit-input-placeholder {
+	color: #2f5597 !important;
+}
+
 
 /*----------------------------
 	Styling the forms
@@ -189,7 +193,7 @@ input[type=text],input[type=password]{
 	width: 234px;
 	text-indent: 8px;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-	color:#eee;
+	color:#2f5597;
 	outline:none;
 }
 
