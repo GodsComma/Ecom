@@ -1,10 +1,10 @@
+html{
+	height:60% !important;
+}
 body{
-	background: url("img/background_img_black-white.jpg");
-	background-size: 103%;
-	background-position: 30% 25%;
-	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-				 0px 8px 13px rgba(0,0,0,0.2),
-				 0px 18px 23px rgba(0,0,0,0.2);
+	background: url("img/background_img_black-white.jpg") !important;
+	background-size: 103% !important;
+	background-position: 30% 25% !important;
 }
 .navbar-inverse {
 	background-color: rgba(34, 34, 34, 0.49);
@@ -53,6 +53,10 @@ body{
 	margin: auto;
 }
 
+li {
+	text-align: left;
+}
+
 #AboutJumbo{
 	position: fixed;
 	left: 0;
@@ -95,6 +99,37 @@ body{
 	text-align: left;
 	margin: auto;
 }
-p{
-	font: 26px/46px 'Segoe UI Light','Segoe UI',Arial,sans-serif;	
+
+#upper_content {
+	padding-top: 0 !important;
+	color: rgba(255,255,255,.9) !important;
+	text-align: center;
 }
+
+#button_cols {
+	display: inline !important;
+	-webkit-column-count: 2 !important;
+    -moz-column-count: 2 !important;
+    column-count: 2 !important;
+}
+
+#lower_content {
+	padding-top: 2% !important;
+	color: rgba(255,255,255,.9) !important;
+	text-align: center;
+	font:18px/30px 'Segoe UI Light','Segoe UI',Arial,sans-serif;
+}
+
+#lower_message {
+	border: 1px solid #505050;
+	padding: 10px 40px;
+	padding-bottom: 30px; 
+	background-color: rgba(0, 0, 0, 0.90);
+	border-color: #080808;
+    width: 50%;
+    border-radius: 25px;
+	text-align: center;
+	margin: auto;
+}
+
+
