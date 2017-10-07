@@ -1,4 +1,10 @@
-																									<!DOCTYPE html>
+<?php	
+
+$connection = mysqli_connect('localhost','root','root','user_db');
+
+if(mysqli_connect_errno($connect))
+	echo 'A connection was not made successfully.';
+																								<!DOCTYPE html>
 																									<html>
 																									<head>
 																										<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,17 +51,17 @@
 
 																													<ul>
 																															<li>
-																																	<input type="name" size="17" name="first" id="first" placeholder="First Name" required="true">								
+																																	<input action = "send_info.php" type="name" size="17" name="firstname" id="first" placeholder="First Name" required="true">								
 																															</li>
 																															<li>
-																																	<input type="name" name="lastName" id="lastName" placeholder="Last Name" required="true">
+																																	<input action = "send_info.php" type="name" name="lastName" id="lastName" placeholder="Last Name" required="true">
 																															</li>
 																													</ul>
-																															<input id="address" type="email" placeholder="Email" required="true">
-																															<input id="con_address" type="Confirm Email" placeholder="Confirm Email" required="true">						
-																															<input type="text" name="userName" id="userName" placeholder="Username" required="true">
-																															<input type="password" name="Password" id="Password" placeholder="Password" required="true">
-																															<input type="password" name="Password" id="con_Password" placeholder="Confirm Password" required="true">
+																															<input action = "send_info.php" id="address" name="email" type="email" placeholder="Email" required="true">
+																															<input action = "send_info.php" id="con_address" type="Confirm Email" placeholder="Confirm Email" required="true">						
+																															<input action = "send_info.php" type="text" name="userName" id="userName" placeholder="Username" required="true">
+																															<input action = "send_info.php" type="password" name="password" id="Password" placeholder="Password" required="true">
+																															<input action="send_info.php" type="password" name="password" id="con_Password" placeholder="Confirm Password" required="true">
 																															<div id="inner_content">
 																															<ul>
 																																	<li>
@@ -137,4 +143,7 @@
 																										</div>
 	
 																									</body>
-																									</html>
+	
+																								</html>
+
+?>
