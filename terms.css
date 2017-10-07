@@ -1,0 +1,35 @@
+body {
+    font:14px/1.3 'Segoe UI',Arial, sans-serif;    
+}
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+
+#terms {
+    padding-top: 50px;
+    padding-left:50px;
+    padding-right:50px;
+    padding-bottom:60px; 
+    text-align: center;    
+}
+
+h1 {
+    text-align: center;
+    font: 66px/46px 'Segoe UI Light','Segoe UI',Arial,sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    padding-bottom: 30px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+	background-color: rgba(0, 0, 0, 0.90);
+	border-top: 1px solid white;
+	color: white;
+	text-align: center;
+}

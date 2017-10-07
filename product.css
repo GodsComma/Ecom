@@ -6,10 +6,16 @@ body{
 	background-size: 103%;
 	background-position: 30% 25%;
 }
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
 
 .navbar-inverse {
 	background-color: rgba(34, 34, 34, 0.49);
 	border-color: #080808;
+	font:14px/1.3 'Segoe UI',Arial, sans-serif;		
 }
 
 .navbar-inverse .navbar-link {
@@ -33,11 +39,15 @@ body{
 }
 
 .padder{
-	padding-top:100px;
+	padding-top:75px;
 }
 
 .pad_50{
 	padding-top:50px;
+}
+
+.pad_25{
+	padding-top:25px;
 }
 
 .pad_10{
@@ -46,8 +56,8 @@ body{
 
 .jumbotron{
 	border: 1px solid #505050;
-	padding: 10px 40px;
-	padding-bottom: 30px; 
+	padding: 10px 10px;
+	padding-bottom: 10px; 
 	background-color: rgba(0, 0, 0, 0.75);
 	border-color: #080808;
 	color: #ffffff;
@@ -177,4 +187,19 @@ hr {
 
 #buybutton:hover {
 	opacity: 1;
+}
+
+.footer {
+    position: fixed;
+	bottom: 0;
+	left: 0;
+	padding-top: 21px;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+	background-color: rgba(0, 0, 0, 0.90);
+	border-top: 1px solid white;
+	color: white;
+	text-align: center;
+	font:14px/1.3 'Segoe UI',Arial, sans-serif;		
 }
