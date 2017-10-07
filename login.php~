@@ -1,0 +1,9 @@
+<?php
+$hn = 'localhost';
+$db = 'user_table';
+$un = 'username';
+$zip = 'zip';
+$first = 'firstname';
+$last = 'lastname';
+$email = 'email';
+$pw = 'password';

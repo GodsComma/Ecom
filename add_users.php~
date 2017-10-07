@@ -1,0 +1,10 @@
+<?php
+require_once 'login.php';
+
+
+function add_user($connection, $user,$hn,$pw){
+
+
+}
+
+?>
