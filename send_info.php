@@ -1,29 +1,21 @@
 <?php
-require_once('connection.php');
+include 'connection.php';
+
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$zip = $_POST['zip'];
 $address = $_POST['address'];
+$city = $_POST['city'];
+$zip = $_POST['zip'];
 $state = $_POST['state'];
 $country = $_POST['country'];
-$city = $_POST['city'];
+$email = $_POST['email'];
 $username = $_POST['username'];
+$password = $_POST['password'];
+$newpassword = sha1($password);
 
+$sql = "INSERT INTO user_table (firstname,lastname,address,zip,city,state,country,email,username,password) 
+VALUES ('$firstname','$lastname','$zip','$city','$address','$state','$country','$email','$username','$newpassword')";
 
-add_user($connection,$firstname,$lastname,$email,$password,$zip,$address,$state,$country,$city,$username);
-
-
-function add_user($connection, $firstname,$lastname,$email,$password,$zip,$address,$state,$country,$city,$username){
-    $query = "INSERT INTO user_table VALUES('$firstname','$lastname','$email','$password','$zip','$address','$state','$country','$city','$username')";
-    $result = $connection->query($query);
-    if (!$result)
-       die($connection->error);
-}
-
-/*
-mysqli_query($connect"INSERT INTO user_table(firstname,lastname,email,password)VALUES('$firstname','$lastname','$email','$password')");
-//Add in zipcode variable support
-*/
+$result = mysqli_query($conn, $sql);
+echo("Congratulation on signing up!");
 ?>

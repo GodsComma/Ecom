@@ -355,12 +355,12 @@ input:required:invalid, input:focus:invalid {
 	left: 125px;
 }
 
-#userName {
+#username {
 	top: 335px;
 	left: 125px;
 }
 
-#Password {
+#password {
 	top: 375px;
 	left: 125px;
 }
