@@ -184,11 +184,12 @@ input[type=text],input[type=password]{
 	color:#000000;
 	outline:none;
 }
-
 #username{
-	top: 215px;
+	top:175px;
 }
-
+#password{
+	top:215px;
+}
 #recoverEmail{
 	top:215px;
 }
@@ -196,7 +197,6 @@ input[type=text],input[type=password]{
 input[type=submit]{
 	
 	/* Submit button */
-	
 	opacity:0.9;
 	position:absolute;
 	top:262px;
@@ -209,7 +209,6 @@ input[type=submit]{
 	border:none;
 	color:#fff;
 	font:14px/36px 'Segoe UI Light','Segoe UI',Arial,sans-serif;
-	
 	/* CSS3 Gradients */
 	
 	background-image: linear-gradient(bottom, rgb(80,102,127) 50%, rgb(87,109,136) 50%, rgb(106,129,155) 100%);

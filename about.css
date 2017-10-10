@@ -101,6 +101,7 @@ li {
 	margin: auto;
 }
 
+
 #upper_content {
 	padding-top: 0 !important;
 	color: rgba(255,255,255,.9) !important;
@@ -112,6 +113,23 @@ li {
 	-webkit-column-count: 2 !important;
     -moz-column-count: 2 !important;
     column-count: 2 !important;
+}
+
+#mid_message {
+	border: 1px solid #505050;
+	padding: 10px 40px;
+	padding-bottom: 30px; 
+	background-color: rgba(0, 0, 0, 0.85);
+	border-color: #080808;
+    width: 50%;
+   /* border-radius: 25px; */
+	text-align: center;
+	margin: auto;
+
+	-webkit-transition: background-color 0.5s ease-out;
+	-moz-transition: background-color 0.5s ease-out;
+	-o-transition: background-color 0.5s ease-out;
+	transition: background-color 0.5s ease-out;
 }
 
 #lower_content {

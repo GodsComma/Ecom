@@ -7,7 +7,14 @@
 	<link rel="stylesheet" type="text/css" href="signup.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>	
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        #login
+        {
+	        background:url('img/signup_form_username_taken.jpg') no-repeat;
+	        z-index:100;
+        }
+    </style>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -42,61 +49,52 @@
 <div id="padder">
 	<div id="formContainer">
 		<form id="login" action="send_info.php" method="POST">
-
-												<ul>
-														<li><input type="name" size="17" name="firstname" id="first" placeholder="First Name" required="true"></li>
-														<li><input type="name" name="lastname" id="lastName" placeholder="Last Name" required="true"></li>
-												</ul>
-												<ul>
-														<li><input type="addr" size="17"  name="address" id="addr" placeholder="Address" required="true"></li>
-														<li><input type="zip" pattern="[0-9]{5}" name="zip" id="zip" placeholder="Zip Code" required="true" title="Must be exactly 5 numeric characters."></li>
-												</ul>
-												<ul>
-														<li><input type="city" name="city"  id="city" placeholder="City" required="true"></li>
-														<li><input type="state"  pattern="[a-zA-z]{2}" name="state" id="state" placeholder="State" required="true" title="Please use state abbreviation."></li>
-														<li><input type="country"  pattern="[a-zA-z]{3}" name="country" id="country" placeholder="Country" required="true" title="Please use your 3 character country code."></li>						
-												</ul>
-				
-														<input id="address" name="email"  type="email" placeholder="Email" required="true" title="Valid email address: one or more characters, followed by an @, followed by one or more characters, a '.' and 2 or more characters for domain." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-														<input id="con_address" type="Confirm Email" placeholder="Confirm Email" required="true" title="Must be the same as above." oninput="checkEmail(this)">
-														<script language='javascript' type='text/javascript'>
-															function checkEmail(input) {
-																if (input.value != document.getElementById('address').value) {
-																	input.setCustomValidity('Emails Must Match.');
-								}
- else {
-									input.setCustomValidity('');
-								}
-							}
-						</script>						
-												<input type="text" name="username" id="username" placeholder="Username" required="true" pattern=".{6,}" title="Must be six or more characters">
-												<input type="password"  name="password" id="password" placeholder="Password" required="true" title="Your password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-												<input type="password" name="Password" id="con_Password" placeholder="Confirm Password" title="Must be the same as above." required="true" oninput="checkPass(this)">
-												<script language='javascript' type='text/javascript'>
-											function checkPass(input) {
-												if (input.value != document.getElementById('password').value) {
-													input.setCustomValidity('Passwords Must Match.');
-												} else {
-													input.setCustomValidity('');
-												}
-				
-											}
-												</script>
-												<div id="inner_content">
-												<ul>
-														<li>
-																<label id="term" for = "terms" style"color:#2f5597">I agree to the <button type="button" id="mybtn" data-toggle="modal" data-target="#myModal">terms and conditions</button></label>
-														</li>
-														<span style="display:inline-block; width: 20px;"></span>
-														<li>
-																<input type="checkbox" name="terms" id="terms" value = "true" required>
-																	</li>
-															</ul>
-															</div>
-															<input type="submit" name="submit" value="Sign Up" />			
-									</form>
-							</div>
-
+			<ul>
+				<li><input type="name" size="17" name="firstname" id="first" placeholder="First Name" required="true"></li>
+				<li><input type="name" name="lastname" id="lastName" placeholder="Last Name" required="true"></li>
+			</ul>
+			<ul>
+				<li><input type="addr" size="17"  name="address" id="addr" placeholder="Address" required="true"></li>
+				<li><input type="zip" pattern="[0-9]{5}" name="zip" id="zip" placeholder="Zip Code" required="true" title="Must be exactly 5 numeric characters."></li>
+			</ul>
+			<ul>
+				<li><input type="city" name="city"  id="city" placeholder="City" required="true"></li>
+				<li><input type="state"  pattern="[a-zA-z]{2}" name="state" id="state" placeholder="State" required="true" title="Please use state abbreviation."></li>
+				<li><input type="country"  pattern="[a-zA-z]{3}" name="country" id="country" placeholder="Country" required="true" title="Please use your 3 character country code."></li>						
+			</ul>
+			<input id="address" name="email"  type="email" placeholder="Email" required="true" title="Valid email address: one or more characters, followed by an @, followed by one or more characters, a '.' and 2 or more characters for domain." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+			<input id="con_address" type="Confirm Email" placeholder="Confirm Email" required="true" title="Must be the same as above." oninput="checkEmail(this)">
+			<script language='javascript' type='text/javascript'>
+			function checkEmail(input) {
+				if (input.value != document.getElementById('address').value) {
+					input.setCustomValidity('Emails Must Match.');
+				} else {
+					input.setCustomValidity('');
+					}
+			}
+			</script>						
+			<input type="text" name="username" id="username" placeholder="Username" required="true" pattern=".{6,}" title="Must be six or more characters">
+			<input type="password"  name="password" id="password" placeholder="Password" required="true" title="Your password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+			<input type="password" name="Password" id="con_Password" placeholder="Confirm Password" title="Must be the same as above." required="true" oninput="checkPass(this)">
+			<script language='javascript' type='text/javascript'>
+			function checkPass(input) {
+				if (input.value != document.getElementById('password').value) {
+					input.setCustomValidity('Passwords Must Match.');
+				} else {
+					input.setCustomValidity('');
+				}
+			}
+			</script>
+			<div id="inner_content">
+				<ul>
+					<li><label id="term" for = "terms" style"color:#2f5597">I agree to the <button type="button" id="mybtn" data-toggle="modal" data-target="#myModal">terms and conditions</button></label></li>
+						<span style="display:inline-block; width: 20px;"></span>
+					<li><input type="checkbox" name="terms" id="terms" value = "true" required></li>
+				</ul>
+			</div>
+			<input type="submit" name="submit" value="Sign Up" />			
+		</form>
+	</div>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
@@ -147,7 +145,7 @@
 </div>
 <footer class="footer">
   <div class="container">
-        &copy; LiveStock 2017 | All Rights Reserved | <a href="terms.html">Terms &amp; Conditions</a> | <a href="sitemap.html">Sitemap</a> | <strong>Break Away From The Herd.</strong>
+        © LiveStock 2017 | All Rights Reserved | <a href="terms.html">Terms &amp; Conditions</a> | <a href="sitemap.html">Sitemap</a> | <strong>Break Away From The Herd.</strong>
     </div>
 </footer>	
 </body>

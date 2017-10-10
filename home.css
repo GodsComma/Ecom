@@ -45,10 +45,13 @@ a, a:visited {
 }
 
 #middle_message {
+	position:absolute;
+	top: 120px;
+	left: 290px;
 	border: 1px solid #505050;
 	padding: 10px 40px;
 	padding-bottom: 30px; 
-	background-color: rgba(0, 0, 0, 0.75);
+	background-color: rgba(0, 0, 0, 0.85);
 	border-color: #080808;
     width: 50%;
    /* border-radius: 25px; */
@@ -83,7 +86,7 @@ a, a:visited {
 }
 
 #middle_message:hover {
-	background-color: rgba(0, 0, 0, 0.90);
+	background-color: rgba(0, 0, 0, 0.95);
 }
 
 #inner_content:hover {
@@ -239,4 +242,29 @@ img {
 	border-top: 1px solid white;
 	color: white;
 	text-align: center;
+}
+
+.tagline {
+	position:absolute;
+	top: 450px;
+	left: 540px;
+	border: 1px solid #505050;
+	padding: 10px 40px;
+	padding-bottom: 30px; 
+	background-color: rgba(0, 0, 0, 1.0);
+	border-color: #080808;
+	color:#ffffff;
+    width: 30%;
+	text-align: center;
+	margin: auto;
+
+	-webkit-transition: background-color 0.5s ease-out;
+	-moz-transition: background-color 0.5s ease-out;
+	-o-transition: background-color 0.5s ease-out;
+	transition: background-color 0.5s ease-out;
+}
+
+.tagline h1 {
+	font: 26px/26px 'Segoe UI Light','Segoe UI',Arial,sans-serif;
+	text-shadow: 2px 2px 4px #000000;
 }
