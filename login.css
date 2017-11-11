@@ -39,3 +39,64 @@
 	color: white;
 	text-align: center;
 }
+
+#cont{
+	width:288px;
+	height:321px;
+	margin:0 auto;
+	position:relative;
+	z-index:1; 
+	
+	-moz-perspective: 800px;
+	-webkit-perspective: 800px;
+	perspective: 800px;
+}
+
+#cont form{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	
+	
+	-moz-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	
+	
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	
+	-moz-transition:0.8s;
+	-webkit-transition:0.8s;
+	transition:0.8s;
+	-moz-animation: pulse 2s infinite;
+	-webkit-animation: pulse 2s infinite;
+}
+
+
+
+@-moz-keyframes pulse{
+	0%{		box-shadow:0 0 1px #ffffff;}
+	50%{	box-shadow:0 0 50px #ffffff;}
+	100%{	box-shadow:0 0 1px #ffffff;}
+}
+
+
+@-webkit-keyframes pulse{
+	0%{		box-shadow:0 0 1px #ffffff;}
+	50%{	box-shadow:0 0 50px #ffffff;}
+	100%{	box-shadow:0 0 1px #ffffff;}
+}
+
+#login{
+	background:url('img/login_form_3.0.jpg') no-repeat;
+	z-index:100;
+}
+
+#login_alt{
+	background:url('img/login_form_3.0_a.jpg') no-repeat;
+	z-index:100;
+}

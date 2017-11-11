@@ -29,12 +29,18 @@ elseif(mysqli_num_rows($resultuser)>0){
  	header('Location: signup_b.php');
  	exit();
 }
+
 else{
+	session_start();
+	session_start();
+	$_SESSION['first'] = $username;
 	$sql = "INSERT INTO user_table (firstname,lastname,address,zip,city,state,country,email,username,password) 
 	VALUES ('$firstname','$lastname','$zip','$city','$address','$state','$country','$email','$username','$newpassword')";
 	$result = mysqli_query($conn, $sql);
 	ob_start();
-	header('Location: signup_s.php');
-	exit();
+	header('Location: mem_home.php');
+    require_once( "send_mail.php" ); send_mail($email,$firstname,$lastname,$username,$address,$city,$state,$zip);
+    exit();
 }
+
 ?>

@@ -4,11 +4,9 @@
 	padding:0;
 }
 
-
 html{
 	background:url('img/bg_tile.jpg') #161718;
 }
-
 body{
 	background:url('img/bg_center.jpg') no-repeat center center;
 	min-height: 600px;
@@ -34,15 +32,12 @@ input::-webkit-input-placeholder {
 	color: #000000 !important;
 }
 
-
-
-
 #formContainer{
 	width:288px;
 	height:321px;
 	margin:0 auto;
 	position:relative;
-	z-index:1;
+/*	z-index:1; */
 	
 	-moz-perspective: 800px;
 	-webkit-perspective: 800px;
@@ -66,15 +61,10 @@ input::-webkit-input-placeholder {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	
-	
 	-moz-transition:0.8s;
 	-webkit-transition:0.8s;
 	transition:0.8s;
-	
-	
 	-moz-animation: pulse 2s infinite;
-	
-	
 	-webkit-animation: pulse 2s infinite;
 }
 
@@ -134,11 +124,6 @@ input::-webkit-input-placeholder {
 }
 
 
-/*----------------------------
-	Inputs, Buttons & Links
------------------------------*/
-
-
 #login .flipLink,
 #recover .flipLink{
 	
@@ -158,8 +143,10 @@ input::-webkit-input-placeholder {
 	left:0;
 }
 
+
+/*
 #login:after{
-	/* The "Click here" tooltip */
+	 The "Click here" tooltip 
 	width:98px;
 	height:16px;
 	content:'';
@@ -168,6 +155,7 @@ input::-webkit-input-placeholder {
 	right:-120px;
 	top:22px;
 }
+*/
 
 input[type=text],input[type=password]{
 	/* The text fields */
@@ -184,12 +172,15 @@ input[type=text],input[type=password]{
 	color:#000000;
 	outline:none;
 }
+
+#password {
+	top: 215px;
+}
+
 #username{
-	top:175px;
+	top: 175px;
 }
-#password{
-	top:215px;
-}
+
 #recoverEmail{
 	top:215px;
 }
@@ -197,6 +188,7 @@ input[type=text],input[type=password]{
 input[type=submit]{
 	
 	/* Submit button */
+	
 	opacity:0.9;
 	position:absolute;
 	top:262px;
@@ -209,6 +201,7 @@ input[type=submit]{
 	border:none;
 	color:#fff;
 	font:14px/36px 'Segoe UI Light','Segoe UI',Arial,sans-serif;
+	
 	/* CSS3 Gradients */
 	
 	background-image: linear-gradient(bottom, rgb(80,102,127) 50%, rgb(87,109,136) 50%, rgb(106,129,155) 100%);

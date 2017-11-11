@@ -1,3 +1,10 @@
+<?php
+session_start();
+if ( isset($_SESSION['login_status']) == true){
+     header('Location: product.php');
+
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,8 +35,7 @@
                 <ul class="nav navbar-nav" id = "homenav">
                     <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About</a></li>                    
-                    <li><a href="product.html">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="product.php">Products</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="signup.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Signup</a></li>
@@ -40,17 +46,12 @@
     </nav>
 
     <div id="padder">
-    <div id="formContainer">
-        <form id="login"  method="POST" action="get_info.php">
-            <a href="#" id="flipToRecover" class="flipLink">Forgot?</a>
+    <div id="cont">
+        <form id="login" method="POST" action="get_info.php">
+            <!-- <a href="#" id="flipToRecover" class="flipLink">Forgot?</a> -->
             <input type="text" name="username" id="username" placeholder="Username" required="true">
             <input type="password" name="password" id="password" placeholder="Password" required="true">
             <input type="submit" name="submit" value="Login">
-        </form>
-        <form id="recover"  method="POST" action="http://www.google.com">
-            <a href="#" id="flipToLogin" class="flipLink">Forgot?</a>
-            <input type="text" name="recoverEmail" id="recoverEmail" placeholder="Your Email" required = "true">
-            <input type="submit" name="submit" value="Recover">
         </form>
     </div>
 </div>

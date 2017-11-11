@@ -43,60 +43,56 @@ require_once('connection.php');
 
 <div id="padder">
 	<div id="formContainer">
-											<form id="login" action="include/send_info.php" method="post">
-
-												<ul>
-														<li><input type="name" action="send_info.php" size="17" name="firstname" id="first" placeholder="First Name" required="true"></li>
-														<li><input type="name" action="send_info.php" name="lastname" id="lastName" placeholder="Last Name" required="true"></li>
-												</ul>
-												<ul>
-														<li><input type="addr" size="17" action="send_info.php" name="address" id="addr" placeholder="Address" required="true"></li>
-														<li><input type="zip" pattern="[0-9]{5}" action="send_info.php" name="zip" id="zip" placeholder="Zip Code" required="true" title="Must be exactly 5 numeric characters."></li>
-												</ul>
-												<ul>
-														<li><input type="city" name="city" action="send_info.php" id="city" placeholder="City" required="true"></li>
-														<li><input type="state" action = "send_info.php" pattern="[a-zA-z]{2}" name="state" id="state" placeholder="State" required="true" title="Please use state abbreviation."></li>
-														<li><input type="country" action = "send_info.php" pattern="[a-zA-z]{3}" name="country" id="country" placeholder="Country" required="true" title="Please use your 3 character country code."></li>						
-												</ul>
+		<form id="login" action="/action_page_post.php" method="post">
+			<ul>
+				<li><input type="name" action="send_info.php" size="17" name="firstname" id="first" placeholder="First Name" required="true" title="Must be text only." pattern="(?=.*[a-z])(?=.*[A-Z])"></li>
+				<li><input type="name" action="send_info.php" name="lastname" id="lastName" placeholder="Last Name" required="true"></li>
+			</ul>
+			<ul>
+				<li><input type="addr" size="17" action="send_info.php" name="address" id="addr" placeholder="Address" required="true"></li>
+				<li><input type="zip" pattern="[0-9]{5}" action="send_info.php" name="zip" id="zip" placeholder="Zip Code" required="true" title="Must be exactly 5 numeric characters."></li>
+			</ul>
+			<ul>
+				<li><input type="city" name="city" action="send_info.php" id="city" placeholder="City" required="true"></li>
+				<li><input type="state" action = "send_info.php" pattern="[a-zA-z]{2}" name="state" id="state" placeholder="State" required="true" title="Please use state abbreviation."></li>
+				<li><input type="country" action = "send_info.php" pattern="[a-zA-z]{3}" name="country" id="country" placeholder="Country" required="true" title="Please use your 3 character country code."></li>						
+			</ul>
 				
-														<input id="address" name="email" action="send_info.php" type="email" placeholder="Email" required="true" title="Valid email address: one or more characters, followed by an @, followed by one or more characters, a '.' and 2 or more characters for domain." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must be a valid email address.' : ''); if(this.checkValidity()) form.address.pattern = this.value;">
-														<input id="con_address" type="Confirm Email" placeholder="Confirm Email" required="true" title="Must be the same as above." oninput="checkEmail(this)">
-														<script language='javascript' type='text/javascript'>
-															function checkEmail(input) {
-																if (input.value != document.getElementById('address').value) {
-																	input.setCustomValidity('Emails Must Match.');
-								}
- else {
-									input.setCustomValidity('');
-								}
-							}
-						</script>						
-												<input type="text" action = "send_info.php" name="username" id="userName" placeholder="Username" required="true" pattern=".{6,}" title="Must be six or more characters">
-												<input type="password" action= "send_info.php" name="password" id="Password" placeholder="Password" required="true" title="Your password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Your password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters' : ''); if(this.checkValidity()) form.Password.pattern = this.value;">
-												<input type="password" name="Password" id="con_Password" placeholder="Confirm Password" title="Must be the same as above." required="true" oninput="checkPass(this)">
-												<script language='javascript' type='text/javascript'>
-											function checkPass(input) {
-												if (input.value != document.getElementById('Password').value) {
-													input.setCustomValidity('Passwords Must Match.');
-												} else {
-													input.setCustomValidity('');
-												}
-											}
-												</script>
-												<div id="inner_content">
-												<ul>
-														<li>
-																<label id="term" for = "terms" style"color:#2f5597">I agree to the <button type="button" id="mybtn" data-toggle="modal" data-target="#myModal">terms and conditions</button></label>
-														</li>
-														<span style="display:inline-block; width: 20px;"></span>
-														<li>
-																<input type="checkbox" name="terms" id="terms" value = "true" required>
-																	</li>
-															</ul>
-															</div>
-															<input type="submit" action="send_info.php" name="submit" value="Sign Up" />			
-									</form>
-							</div>
+			<input id="address" name="email" action="send_info.php" type="email" placeholder="Email" required="true" title="Must be a valid email address: one or more characters, followed by an @, followed by one or more characters, a '.' and 2 or more characters for domain." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+			<input id="con_address" type="Confirm Email" placeholder="Confirm Email" required="true" title="Must be the same as above." oninput="checkEmail(this)">
+			<script language='javascript' type='text/javascript'>
+				function checkEmail(input) {
+					if (input.value != document.getElementById('address').value) {
+						input.setCustomValidity('Emails Must Match.');
+						}
+						else {
+							input.setCustomValidity('');
+						}
+					}
+			</script>	
+					
+			<input type="text" action = "send_info.php" name="username" id="username" placeholder="Username" required="true" pattern=".{6,}" title="Must be six or more characters">
+			<input type="password" action= "send_info.php" name="password" id="password" placeholder="Password" required="true" title="Your password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+			<input type="password" name="Password" id="con_Password" placeholder="Confirm Password" title="Must be the same as above." required="true" oninput="checkPass(this)">
+			<script language='javascript' type='text/javascript'>
+				function checkPass(input) {
+					if (input.value != document.getElementById('Password').value) {
+						input.setCustomValidity('Passwords Must Match.');
+					} else {
+						input.setCustomValidity('');
+					}
+				}
+			</script>
+			<div id="inner_content">
+				<ul>
+					<li><label id="term" for = "terms" style"color:#2f5597">I agree to the <button type="button" id="mybtn" data-toggle="modal" data-target="#myModal">terms and conditions</button></label></li>
+						<span style="display:inline-block; width: 20px;"></span>
+					<li><input type="checkbox" name="terms" id="terms" value = "true" required></li>
+				</ul>
+			</div>
+			<input type="submit" action="send_info.php" name="submit" value="Sign Up" />			
+		</form>
+	</div>
 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">

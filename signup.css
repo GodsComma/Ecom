@@ -116,7 +116,7 @@ h3 {
 }
 
 #login{
-	background:url('img/signup_form4.jpg') no-repeat;
+	background:url('img/signup_form5.jpg') no-repeat;
 	z-index:100;
 }
 
@@ -189,7 +189,7 @@ input[type=name] {
 	left: 26px;
 	position: absolute;
 	top: 176px;
-	width: 160px;
+	width: 200px;
 	text-indent: 8px;
 	padding: 2px 20px 2px 2px;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -240,7 +240,7 @@ input[type=city] {
 	left: 26px;
 	position: absolute;
 	top: 176px;
-	width: 140px;
+	width: 130px;
 	text-indent: 8px;
 	padding: 2px 20px 2px 2px;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -291,7 +291,7 @@ input[type=text],input[type=password],input[type=email], input[type="Confirm Ema
 	left: 26px;
 	position: absolute;
 	top: 176px;
-	width: 350px;
+	width: 430px;
 	text-indent: 8px;
 	padding: 2px 20px 2px 2px;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -313,66 +313,69 @@ input:required:invalid, input:focus:invalid {
 
 
 #first {
-	top: 135px;
+	top: 105px;
 	left: 125px;
 }
 
 #lastName {
-	top: 135px;
-	left: 315px;
+	top: 105px;
+	left: 350px;
 }
 
 #addr {
+	top: 160px;
 	left: 125px;	
 }
 
 #zip {
-	left: 380px;	
+	top: 160px;
+	left: 460px;	
 }
 
 #city {
-	top: 215px;
+	top: 220px;
 	left: 125px;
 }
 
 #state {
-	top: 215px;
+	position: absolute;
+	top: 227px;
 	left: 285px;
 }
 
 #country {
-	top: 215px;
-	left: 380px;
+	top: 220px;
+	left: 460px;
 }
 
 #address {
-	top: 255px;
+	top: 260px;
 	left: 125px;
 }
 
 #con_address {
-	top: 295px;
+	top: 300px;
 	left: 125px;
 }
 
 #username {
-	top: 335px;
+	top: 340px;
 	left: 125px;
 }
 
 #password {
-	top: 375px;
+	top: 384px;
 	left: 125px;
 }
 
 #con_Password {
-	top: 415px;
+	top: 425px;
 	left: 125px;
 }
 
 #inner_content ul {
 	position: absolute;
-	top: 465px;
+	top: 485px;
 	font: 15px 'Segoe UI',Arial,sans-serif;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 	color:#eee;
@@ -389,8 +392,8 @@ input[type=submit]{
 	
 	opacity:0.9;
 	position:absolute;
-	top:515px;
-	left:190px;
+	top:530px;
+	left:225px;
 	width: 239px;
 	height:36px;
 	cursor:pointer;
